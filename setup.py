@@ -31,7 +31,7 @@ class build_ext(build_ext):
         self.distribution.ext_modules[:] = []
         super().build_extensions()
         if sys.platform.startswith("linux") or sys.platform == "darwin":
-            dds_src = Path(__file__).resolve().parent / "dds/src"
+            dds_src = Path(__file__).resolve().parent / "mydds/src"
             if not dds_src.exists():
                 sys.exit("""\
 DDS sources are missing.
