@@ -1,0 +1,3 @@
+[submodule "mydds"]
+	path = mydds
+	url = https://github.com/jimmy6727/mydds
