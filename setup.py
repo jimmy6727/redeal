@@ -61,7 +61,7 @@ On a Unix system, do not use the zip archives from github.""")
                         "-dynamiclib -o lib$(DLLBASE).so $(O_FILES) -lc++\n"))
                     subprocess.check_call(
                         ["make", "-f", "Makefiles/Makefile_Mac_clang_static",
-                         "CC=gcc"], cwd=dds_src)
+                         "CC=g++"], cwd=dds_src)
                 finally:
                     patched_path.write_text(contents)
             shutil.copy2(dds_src / "libdds.so", self.__dest_dir)
